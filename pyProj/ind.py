@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 
 def decorator(func):
-    def decorator_inside(A, B):
-        data = func(A, B)
+    def decorator_inside(*args):
+        data = func(*args)
         return dict(zip(*data))
 
     return decorator_inside
